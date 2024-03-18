@@ -19,6 +19,9 @@ import KhamPha from './src/Component/KhamPha';
 import  User from './src/Component/User';
 import ChatScreen from './src/Component/Chat';
 import { AuthProvider } from './src/Login/AuthProvider';
+import TimKiem from './src/Component/Search';
+import ChinhSuaLichSuTimKiem from './src/Component/SettingSearchHistory';
+import AddFriend from './src/Component/AddFriend';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -86,6 +89,9 @@ function App() {
       <Stack.Screen name="Login" component={Login} options={{ title:'Đăng nhập'  }}/>
       <Stack.Screen name="HomeLogin" component={HomeChat} options={{ headerShown: false}}/>
       <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false}}/>
+      <Stack.Screen name="TimKiem" component={TimKiem} options={{ headerShown: false}}/>
+      <Stack.Screen name="ChinhSuaLichSuTimKiem" component={ChinhSuaLichSuTimKiem} options={{ headerShown: false}}/>
+      <Stack.Screen name="AddFriend" component={AddFriend} options={{ headerShown: false}}/>
     </Stack.Navigator>
     </NavigationContainer>
     </AuthProvider>
